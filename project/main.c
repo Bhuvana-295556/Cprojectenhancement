@@ -19,6 +19,7 @@ void degree();
 void sine();
 void cosine();
 void tangent();
+void logarithm();
 int main(){
     printf("\t\tWelcome to the scientific calculator!!\n\n");
     int choice;
@@ -38,7 +39,8 @@ int main(){
     printf("Enter 13  for radian to degree\n");
     printf("Enter 14  for sine value\n");
     printf("Enter 15  for cosine value\n");
-    printf("Enter 16  for tangent value\n\n");
+    printf("Enter 16  for tangent value\n");
+    printf("Enter 17 for logarithm value\n\n");
     while(1){    
     printf("\n\nEnter the operation you want to do: ");
     
@@ -93,7 +95,10 @@ int main(){
                     	break;
                   case 16:
                     	tangent();
-                    	break;  	
+                    	break;  
+                    case 17:
+                    	logarithm();
+                    	break;
                 case 0:
                     exit(0);
                 default:
@@ -221,5 +226,13 @@ void tangent(){
     scanf("%lf",&arg);
     result = tan(arg);
     printf("tan(%lf) = %lf\n", arg, result);
+}
+void logarithm(){
+     double arg;
+     double  result;
+    printf("Enter the arg value: ");
+    scanf("%lf",&arg);
+    result = log(arg);
+    printf("log(%lf) = %lf\n", arg, result);
 }
 
